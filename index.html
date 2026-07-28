@@ -1,296 +1,558 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EcoTech</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body{
-    background:#dff3df;
-    display:flex;
-    justify-content:center;
-    padding:20px;
-}
+    <title>EcoTech</title>
 
-.celular{
-    width:360px;
-    height:740px;
-    background:white;
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 0 20px rgba(0,0,0,.2);
-    position:relative;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-header{
-    background:#6fcf97;
-    color:white;
-    padding:15px;
-    text-align:center;
-    font-size:24px;
-    font-weight:bold;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-.tela{
-    display:none;
-    padding:15px;
-    height:600px;
-    overflow:auto;
-}
+    <link rel="stylesheet" href="style.css">
 
-.ativa{
-    display:block;
-}
-
-.banner{
-    background:#b7e4c7;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    margin-bottom:15px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-}
-
-.card{
-    background:#f2f2f2;
-    padding:15px;
-    border-radius:12px;
-    text-align:center;
-}
-
-.lista{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.item{
-    background:#eaf7ea;
-    padding:12px;
-    border-radius:10px;
-}
-
-.mapa{
-    height:300px;
-    background:#ddd;
-    border-radius:15px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:20px;
-}
-
-.perfil{
-    text-align:center;
-}
-
-.foto{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    background:#6fcf97;
-    margin:auto;
-    margin-bottom:10px;
-}
-
-.pontos{
-    background:#b7e4c7;
-    padding:20px;
-    border-radius:15px;
-    margin:15px 0;
-    font-size:25px;
-    font-weight:bold;
-}
-
-nav{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    display:flex;
-    justify-content:space-around;
-    background:#6fcf97;
-}
-
-nav button{
-    flex:1;
-    padding:15px;
-    border:none;
-    background:none;
-    color:white;
-    font-size:15px;
-    cursor:pointer;
-}
-
-nav button:hover{
-    background:#57b67d;
-}
-</style>
 </head>
 
 <body>
 
 <div class="celular">
 
-<header>🌱 EcoTech</header>
+<!-- ================= HEADER ================= -->
 
-<!-- HOME -->
-<div class="tela ativa" id="home">
+<header>
+
+    <div class="logo">
+
+        🌱
+
+    </div>
+
+    <div>
+
+        <h1>EcoTech</h1>
+        <p>Sustentabilidade na palma da sua mão</p>
+
+    </div>
+
+</header>
+
+<!-- ================= HOME ================= -->
+
+<section class="tela ativa" id="home">
 
 <div class="banner">
-<h2>Olá, Pedro!</h2>
-<p>Bem-vindo ao EcoTech.</p>
+
+    <div>
+
+        <span class="bemvindo">
+            Bem-vindo!
+        </span>
+
+        <h2>
+            Henrique
+        </h2>
+
+        <p>
+            Continue reciclando e ganhe EcoPontos!
+        </p>
+
+    </div>
+
+    <div class="banner-icon">
+
+        🌍
+
+    </div>
+
+</div>
+
+<h3 class="titulo">
+
+    Acesso Rápido
+
+</h3>
+
+<div class="grid">
+
+<div class="card" onclick="mostrar('guia')">
+
+<div class="icone">
+
+📖
+
+</div>
+
+<h4>Guia</h4>
+
+<p>Aprenda a reciclar corretamente.</p>
+
+</div>
+
+<div class="card" onclick="mostrar('mapa')">
+
+<div class="icone">
+
+📍
+
+</div>
+
+<h4>Mapa</h4>
+
+<p>Encontre pontos de coleta.</p>
+
+</div>
+
+<div class="card" onclick="mostrar('dicas')">
+
+<div class="icone">
+
+💡
+
+</div>
+
+<h4>Dicas</h4>
+
+<p>Práticas sustentáveis.</p>
+
+</div>
+
+<div class="card" onclick="mostrar('perfil')">
+
+<div class="icone">
+
+🏆
+
+</div>
+
+<h4>EcoPontos</h4>
+
+<p>Veja sua pontuação.</p>
+
+</div>
+
+</div>
+
+<div class="status-card">
+
+<div>
+
+<span>
+
+♻ Próxima coleta
+
+</span>
+
+<h3>
+
+Em 2 dias
+
+</h3>
+
+</div>
+
+<div>
+
+🚛
+
+</div>
+
+</div>
+
+<div class="status-card">
+
+<div>
+
+<span>
+
+🌳 Total reciclado
+
+</span>
+
+<h3>
+
+45 kg
+
+</h3>
+
+</div>
+
+<div>
+
+🍃
+
+</div>
+
+</div>
+
+<div class="status-card">
+
+<div>
+
+<span>
+
+🏆 EcoPontos
+
+</span>
+
+<h3>
+
+350
+
+</h3>
+
+</div>
+
+<div>
+
+⭐
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= GUIA ================= -->
+
+<section class="tela" id="guia">
+
+<div class="topo">
+
+<button class="voltar" onclick="mostrar('home')">
+
+←
+
+</button>
+
+<h2>
+
+Guia de Reciclagem
+
+</h2>
+
 </div>
 
 <div class="grid">
 
 <div class="card">
-📖<br>
-Guia
+
+<div class="icone">
+
+📄
+
+</div>
+
+<h4>Papel</h4>
+
+<p>Jornais, revistas e caixas.</p>
+
 </div>
 
 <div class="card">
-📍<br>
-Pontos
+
+<div class="icone">
+
+🧴
+
+</div>
+
+<h4>Plástico</h4>
+
+<p>Garrafas e embalagens.</p>
+
 </div>
 
 <div class="card">
-💡<br>
-Dicas
+
+<div class="icone">
+
+🍾
+
+</div>
+
+<h4>Vidro</h4>
+
+<p>Garrafas e potes.</p>
+
 </div>
 
 <div class="card">
-🏆<br>
-Pontuação
-</div>
+
+<div class="icone">
+
+🥫
 
 </div>
 
-<br>
+<h4>Metal</h4>
 
-<div class="item">
-♻ Próxima coleta em 2 dias.
-</div>
+<p>Latas e alumínio.</p>
 
 </div>
 
-<!-- GUIA -->
-<div class="tela" id="guia">
+<div class="card">
 
-<h2>Guia de Reciclagem</h2>
+<div class="icone">
 
-<br>
-
-<div class="grid">
-
-<div class="card">📄 Papel</div>
-<div class="card">🧴 Plástico</div>
-<div class="card">🍾 Vidro</div>
-<div class="card">🥫 Metal</div>
-<div class="card">🍃 Orgânico</div>
-<div class="card">🚫 Não reciclável</div>
+🍃
 
 </div>
 
-</div>
+<h4>Orgânico</h4>
 
-<!-- MAPA -->
-<div class="tela" id="mapa">
-
-<h2>Pontos de Coleta</h2>
-
-<br>
-
-<div class="mapa">
-🗺️ Mapa
-</div>
-
-<br>
-
-<div class="item">
-📍 Cooperativa ReciclaJá
-</div>
-
-<div class="item">
-📍 Escola EcoTech
-</div>
+<p>Restos de alimentos.</p>
 
 </div>
 
-<!-- PERFIL -->
-<div class="tela" id="perfil">
+<div class="card">
 
-<div class="perfil">
+<div class="icone">
 
-<div class="foto"></div>
+🚫
 
-<h2>Pedro Henrique</h2>
-
-<div class="pontos">
-350 EcoPontos
 </div>
 
-<div class="lista">
+<h4>Não reciclável</h4>
 
-<div class="item">
-+50 pontos<br>
-Descarte realizado.
-</div>
-
-<div class="item">
-+20 pontos<br>
-Quiz respondido.
-</div>
-
-<div class="item">
-🌳 45kg reciclados
-</div>
+<p>Materiais contaminados.</p>
 
 </div>
 
 </div>
 
-</div>
+</section>
+<!-- ================= MAPA ================= -->
+
+<section class="tela" id="mapa">
+
+    <div class="topo">
+
+        <button class="voltar" onclick="mostrar('home')">
+            ←
+        </button>
+
+        <h2>Pontos de Coleta</h2>
+
+    </div>
+
+    <div class="mapa">
+
+        <div class="mapa-icone">
+            🗺️
+        </div>
+
+        <h3>Mapa Interativo</h3>
+
+        <p>
+            Encontre os pontos de coleta mais próximos.
+        </p>
+
+    </div>
+
+    <div class="lista">
+
+        <div class="item">
+
+            <div>
+
+                <h4>♻ Cooperativa ReciclaJá</h4>
+
+                <p>Centro • 1,2 km</p>
+
+            </div>
+
+            <button>Ver</button>
+
+        </div>
+
+        <div class="item">
+
+            <div>
+
+                <h4>🏫 Escola EcoTech</h4>
+
+                <p>Bairro Verde • 2,5 km</p>
+
+            </div>
+
+            <button>Ver</button>
+
+        </div>
+
+        <div class="item">
+
+            <div>
+
+                <h4>🌳 Parque Ambiental</h4>
+
+                <p>Zona Norte • 3 km</p>
+
+            </div>
+
+            <button>Ver</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= DICAS ================= -->
+
+<section class="tela" id="dicas">
+
+    <div class="topo">
+
+        <button class="voltar" onclick="mostrar('home')">
+            ←
+        </button>
+
+        <h2>Dicas Sustentáveis</h2>
+
+    </div>
+
+    <div class="lista">
+
+        <div class="item">
+
+            💧
+            Economize água fechando a torneira ao escovar os dentes.
+
+        </div>
+
+        <div class="item">
+
+            🔌
+            Desligue aparelhos da tomada quando não estiver usando.
+
+        </div>
+
+        <div class="item">
+
+            🛍
+            Utilize sacolas reutilizáveis.
+
+        </div>
+
+        <div class="item">
+
+            🚲
+            Sempre que possível utilize bicicleta ou caminhe.
+
+        </div>
+
+        <div class="item">
+
+            🌱
+            Faça compostagem com resíduos orgânicos.
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PERFIL ================= -->
+
+<section class="tela" id="perfil">
+
+    <div class="perfil">
+
+        <div class="avatar">
+
+            👤
+
+        </div>
+
+        <h2>Pedro Henrique</h2>
+
+        <p>Membro EcoTech</p>
+
+    </div>
+
+    <div class="eco-card">
+
+        <h3>350 EcoPontos</h3>
+
+        <span>Nível Verde</span>
+
+    </div>
+
+    <div class="lista">
+
+        <div class="item">
+
+            🌳 45 kg reciclados
+
+        </div>
+
+        <div class="item">
+
+            🏆 15 descartes realizados
+
+        </div>
+
+        <div class="item">
+
+            📖 8 guias consultados
+
+        </div>
+
+        <div class="item">
+
+            ⭐ Próxima meta: 500 EcoPontos
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= MENU ================= -->
 
 <nav>
 
-<button onclick="mostrar('home')">🏠<br>Home</button>
+    <button onclick="mostrar('home')">
 
-<button onclick="mostrar('mapa')">📍<br>Mapa</button>
+        <span>🏠</span>
 
-<button onclick="mostrar('guia')">📖<br>Guia</button>
+        Home
 
-<button onclick="mostrar('perfil')">👤<br>Perfil</button>
+    </button>
+
+    <button onclick="mostrar('mapa')">
+
+        <span>📍</span>
+
+        Mapa
+
+    </button>
+
+    <button onclick="mostrar('guia')">
+
+        <span>📖</span>
+
+        Guia
+
+    </button>
+
+    <button onclick="mostrar('perfil')">
+
+        <span>👤</span>
+
+        Perfil
+
+    </button>
 
 </nav>
 
 </div>
 
-<script>
-
-function mostrar(id){
-
-let telas=document.querySelectorAll(".tela");
-
-telas.forEach(t=>t.classList.remove("ativa"));
-
-document.getElementById(id).classList.add("ativa");
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
