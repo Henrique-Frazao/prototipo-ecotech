@@ -2,274 +2,479 @@
 // ECO TECH
 // ===============================
 
-// Troca de telas
-function mostrar(id) {
+
+// ===============================
+// TROCA DE TELAS
+// ===============================
+
+function mostrar(id){
+
 
     const telas = document.querySelectorAll(".tela");
 
-    telas.forEach(tela => {
+
+    telas.forEach(tela=>{
+
         tela.classList.remove("ativa");
+
     });
 
-    document.getElementById(id).classList.add("ativa");
+
+
+    const pagina = document.getElementById(id);
+
+
+    if(pagina){
+
+        pagina.classList.add("ativa");
+
+    }
+
 
     window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+
+        top:0,
+
+        behavior:"smooth"
+
     });
+
 
 }
 
+
+
+
+
 // ===============================
-// DADOS DO USUÁRIO
+// USUÁRIO LOCALSTORAGE
 // ===============================
 
-const usuario = {
 
-    nome: "Pedro Henrique",
+let usuario = JSON.parse(
+    localStorage.getItem("ecoUsuario")
+) || {
 
-    pontos: 350,
 
-    reciclado: 45,
+    nome:"Pedro Henrique",
 
-    nivel: "Verde"
+    pontos:350,
+
+    reciclado:45,
+
+    nivel:"Verde"
+
 
 };
+
+
+
+
+
+function salvarUsuario(){
+
+
+    localStorage.setItem(
+
+        "ecoUsuario",
+
+        JSON.stringify(usuario)
+
+    );
+
+
+}
+
+
+
+
 
 // ===============================
 // SAUDAÇÃO
 // ===============================
 
-function atualizarSaudacao() {
 
-    const hora = new Date().getHours();
+function atualizarSaudacao(){
+
+
+
+    const hora =
+    new Date().getHours();
+
+
 
     let saudacao;
 
-    if (hora < 12){
 
-        saudacao = "Bom dia";
 
-    }else if(hora < 18){
+    if(hora < 12){
 
-        saudacao = "Boa tarde";
 
-    }else{
+        saudacao="Bom dia";
 
-        saudacao = "Boa noite";
 
     }
 
-    const titulo = document.querySelector(".banner h2");
+    else if(hora <18){
 
-    titulo.innerHTML = saudacao + ", " + usuario.nome + "!";
+
+        saudacao="Boa tarde";
+
+
+    }
+
+    else{
+
+
+        saudacao="Boa noite";
+
+
+    }
+
+
+
+
+
+    const titulo =
+    document.querySelector(
+        ".banner h2"
+    );
+
+
+
+    if(titulo){
+
+
+        titulo.innerHTML =
+
+        saudacao + ", " + usuario.nome + "!";
+
+
+    }
+
 
 }
 
+
+
+
+
+
+
 // ===============================
-// ECO PONTOS
+// PERFIL
 // ===============================
 
-function ganharPontos(valor){
-
-    usuario.pontos += valor;
-
-    atualizarPerfil();
-
-    alert("🎉 Você ganhou " + valor + " EcoPontos!");
-
-}
 
 function atualizarPerfil(){
 
-    const eco = document.querySelector(".eco-card h3");
 
-    if(eco){
 
-        eco.innerHTML = usuario.pontos + " EcoPontos";
+    const nome =
+    document.getElementById(
+        "nomePerfil"
+    );
+
+
+
+    if(nome){
+
+        nome.innerHTML =
+        usuario.nome;
 
     }
 
+
+
+
+
+    const pontos =
+    document.querySelector(
+        ".eco-card h3"
+    );
+
+
+
+    if(pontos){
+
+
+        pontos.innerHTML =
+
+        usuario.pontos +
+
+        " EcoPontos";
+
+
+    }
+
+
+
 }
+
+
+
+
+
+
+
+// ===============================
+// GANHAR PONTOS
+// ===============================
+
+
+function ganharPontos(valor){
+
+
+
+    usuario.pontos += valor;
+
+
+
+    salvarUsuario();
+
+
+
+    atualizarPerfil();
+
+
+
+    alert(
+
+        "🎉 Você ganhou "
+
+        + valor +
+
+        " EcoPontos!"
+
+    );
+
+
+}
+
+
+
+
+
+
 
 // ===============================
 // DICAS
 // ===============================
 
-const dicas = [
+
+const dicas=[
+
 
 "Separe corretamente o lixo reciclável.",
 
-"Utilize garrafas reutilizáveis.",
-
 "Economize água durante o banho.",
-
-"Prefira bicicleta ao carro.",
 
 "Evite plástico descartável.",
 
-"Apague as luzes ao sair.",
+"Use garrafas reutilizáveis.",
 
-"Plante uma árvore.",
+"Faça compostagem.",
 
-"Doe roupas que não utiliza.",
+"Utilize ecobags."
 
-"Use ecobags.",
-
-"Faça compostagem."
 
 ];
 
-// ===============================
+
+
+
+
 
 function dicaAleatoria(){
 
-    let numero = Math.floor(Math.random()*dicas.length);
 
-    alert("💡 Dica Sustentável\n\n" + dicas[numero]);
+
+    let numero =
+    Math.floor(
+        Math.random()*dicas.length
+    );
+
+
+
+    alert(
+
+        "💡 Dica Sustentável\n\n"
+
+        +
+
+        dicas[numero]
+
+    );
+
 
 }
 
+
+
+
+
+
+
 // ===============================
-// GUIA
+// CLIQUE NAS DICAS
 // ===============================
 
-const materiais = document.querySelectorAll("#guia .card");
 
-materiais.forEach(card=>{
+function ativarDicas(){
 
-    card.addEventListener("click",()=>{
 
-        alert(
+    const itens =
+    document.querySelectorAll(
+        "#dicas .item"
+    );
 
-            "♻ " +
 
-            card.querySelector("h4").innerHTML +
 
-            "\n\nClique em OK para continuar."
+    itens.forEach(item=>{
 
-        );
+
+        item.onclick=()=>{
+
+
+            ganharPontos(5);
+
+
+        }
+
 
     });
 
-});
+
+}
+
+
+
+
+
 
 // ===============================
 // MAPA
 // ===============================
 
-const locais = document.querySelectorAll("#mapa .item button");
 
-locais.forEach(botao=>{
+function ativarMapa(){
 
-    botao.onclick = ()=>{
 
-        alert("📍 Local aberto com sucesso!");
+    const botoes =
+    document.querySelectorAll(
+        "#mapa button"
+    );
 
-    }
 
-});
 
-// ===============================
-// HOME
-// ===============================
+    botoes.forEach(botao=>{
 
-const cards = document.querySelectorAll("#home .card");
 
-cards.forEach(card=>{
+        botao.onclick=()=>{
 
-    card.addEventListener("mouseenter",()=>{
 
-        card.style.transform="scale(1.03)";
+            alert(
+                "📍 Local aberto!"
+            );
 
-    });
 
-    card.addEventListener("mouseleave",()=>{
+        }
 
-        card.style.transform="scale(1)";
 
     });
 
-});
+
+}
+
+
+
+
+
 
 // ===============================
-// ANIMAÇÃO DOS CARDS
+// ANIMAÇÃO
 // ===============================
 
-window.addEventListener("load",()=>{
 
-    atualizarPerfil();
+function animarCards(){
 
-    atualizarSaudacao();
 
-    const cards = document.querySelectorAll(".card");
+
+    const cards =
+    document.querySelectorAll(
+        ".card"
+    );
+
+
 
     cards.forEach((card,i)=>{
 
+
         card.style.opacity="0";
 
-        card.style.transform="translateY(20px)";
+
 
         setTimeout(()=>{
 
+
             card.style.transition=".4s";
+
 
             card.style.opacity="1";
 
-            card.style.transform="translateY(0px)";
 
-        },i*120);
+
+        },i*100);
+
+
 
     });
 
-});
+
+
+}
+
+
+
+
+
 
 // ===============================
-// NOTIFICAÇÃO
+// INICIAR APP
 // ===============================
 
-setTimeout(()=>{
 
-    alert(
+window.addEventListener(
+"load",
+()=>{
 
-        "🌱 Bem-vindo ao EcoTech!\n\nAjude o planeta reciclando."
 
-    );
+    atualizarSaudacao();
 
-},1000);
 
-// ===============================
-// BOTÃO DE DICAS
-// ===============================
+    atualizarPerfil();
 
-const botaoDicas = document.querySelectorAll("#dicas .item");
 
-botaoDicas.forEach(item=>{
+    ativarDicas();
 
-    item.onclick=()=>{
 
-        ganharPontos(5);
+    ativarMapa();
 
-    }
 
-});
+    animarCards();
 
-// ===============================
-// TECLADO
-// ===============================
 
-document.addEventListener("keydown",(e)=>{
 
-    if(e.key=="1") mostrar("home");
+    salvarUsuario();
 
-    if(e.key=="2") mostrar("mapa");
-
-    if(e.key=="3") mostrar("guia");
-
-    if(e.key=="4") mostrar("perfil");
 
 });
 
-// ===============================
 
-console.log("EcoTech iniciado com sucesso!");
+
+
+
+
+console.log(
+"EcoTech iniciado com sucesso!"
+);
