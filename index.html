@@ -1,1077 +1,334 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<title>EcoTech</title>
-
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-
-<link rel="stylesheet" href="style.css">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
-
-
 <body>
 
-
-
-<div class="celular">
-
-
-
-
-
-<!-- ================= HEADER ================= -->
-
-
-<header>
-
-
-<div class="logo">
-
-🌱
-
-</div>
-
-
-
-<div>
-
-
-<h1>
-
-EcoTech
-
-</h1>
-
-
-<p>
-
-Sustentabilidade na palma da sua mão
-
-</p>
-
-
-</div>
-
-
-
-</header>
-
-
-
-
-
-
-
-<!-- ================= HOME ================= -->
-
-
-<section class="tela ativa" id="home">
-
-
-
-<div class="banner">
-
-
-<div>
-
-
-<span class="bemvindo">
-
-Bem-vindo!
-
-</span>
-
-
-
-<h2>
-
-Usuário
-
-</h2>
-
-
-
-
-<p>
-
-Continue reciclando e ganhe EcoPontos!
-
-</p>
-
-
-
-</div>
-
-
-
-
-<div class="banner-icon">
-
-🌍
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<h3 class="titulo">
-
-Acesso Rápido
-
-</h3>
-
-
-
-
-
-
-
-<div class="grid">
-
-
-
-<div class="card" onclick="mostrar('guia')">
-
-
-<div class="icone">
-
-📖
-
-</div>
-
-
-
-<h4>
-
-Guia
-
-</h4>
-
-
-<p>
-
-Aprenda a reciclar corretamente.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card" onclick="mostrar('mapa')">
-
-
-<div class="icone">
-
-📍
-
-</div>
-
-
-
-<h4>
-
-Mapa
-
-</h4>
-
-
-<p>
-
-Encontre pontos de coleta.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card" onclick="mostrar('dicas')">
-
-
-<div class="icone">
-
-💡
-
-</div>
-
-
-
-<h4>
-
-Dicas
-
-</h4>
-
-
-<p>
-
-Práticas sustentáveis.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card" onclick="mostrar('perfil')">
-
-
-<div class="icone">
-
-🏆
-
-</div>
-
-
-
-<h4>
-
-EcoPontos
-
-</h4>
-
-
-<p>
-
-Veja sua pontuação.
-
-</p>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="status-card">
-
-
-<div>
-
-
-<span>
-
-♻ Total reciclado
-
-</span>
-
-
-
-<h3>
-
-45 kg
-
-</h3>
-
-
-
-</div>
-
-
-
-<div>
-
-🌱
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="status-card">
-
-
-<div>
-
-
-<span>
-
-🏆 EcoPontos
-
-</span>
-
-
-
-<h3>
-
-350
-
-</h3>
-
-
-
-</div>
-
-
-
-<div>
-
-⭐
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- ================= GUIA ================= -->
-
-
-<section class="tela" id="guia">
-
-
-<div class="topo">
-
-
-<button class="voltar" onclick="mostrar('home')">
-
-←
-
-</button>
-
-
-<h2>
-
-Guia de Reciclagem
-
-</h2>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="grid">
-
-
-
-<div class="card">
-
-
-<div class="icone">
-
-📄
-
-</div>
-
-
-<h4>
-
-Papel
-
-</h4>
-
-
-<p>
-
-Jornais, revistas e caixas.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<div class="icone">
-
-🧴
-
-</div>
-
-
-<h4>
-
-Plástico
-
-</h4>
-
-
-<p>
-
-Garrafas e embalagens.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<div class="icone">
-
-🍾
-
-</div>
-
-
-<h4>
-
-Vidro
-
-</h4>
-
-
-<p>
-
-Garrafas e potes.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<div class="icone">
-
-🥫
-
-</div>
-
-
-<h4>
-
-Metal
-
-</h4>
-
-
-<p>
-
-Latas e alumínio.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-<!-- ================= MAPA ================= -->
-
-
-<section class="tela" id="mapa">
-
-
-
-<div class="topo">
-
-
-<button class="voltar" onclick="mostrar('home')">
-
-←
-
-</button>
-
-
-
-<h2>
-
-Pontos de Coleta
-
-</h2>
-
-
-</div>
-
-
-
-
-
-
-<div class="mapa">
-
-
-<div class="mapa-icone">
-
-🗺️
-
-</div>
-
-
-
-<h3>
-
-Mapa Interativo
-
-</h3>
-
-
-
-<p>
-
-Encontre pontos próximos.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="lista">
-
-
-
-<div class="item">
-
-
-<div>
-
-
-<h4>
-
-♻ Cooperativa ReciclaJá
-
-</h4>
-
-
-<p>
-
-Centro • 1,2 km
-
-</p>
-
-
-
-</div>
-
-
-
-<button>
-
-Ver
-
-</button>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="item">
-
-
-<div>
-
-
-<h4>
-
-🏫 Escola EcoTech
-
-</h4>
-
-
-<p>
-
-Bairro Verde • 2,5 km
-
-</p>
-
-
-
-</div>
-
-
-
-<button>
-
-Ver
-
-</button>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="item">
-
-
-<div>
-
-
-<h4>
-
-🌳 Parque Ambiental
-
-</h4>
-
-
-<p>
-
-Zona Norte • 3 km
-
-</p>
-
-
-
-</div>
-
-
-
-<button>
-
-Ver
-
-</button>
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- ================= DICAS ================= -->
-
-
-<section class="tela" id="dicas">
-
-
-<div class="topo">
-
-
-<button class="voltar" onclick="mostrar('home')">
-
-←
-
-</button>
-
-
-
-<h2>
-
-Dicas Sustentáveis
-
-</h2>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="lista">
-
-
-
-<div class="item">
-
-💧 Economize água fechando a torneira.
-
-</div>
-
-
-
-<div class="item">
-
-🔌 Desligue aparelhos sem uso.
-
-</div>
-
-
-
-<div class="item">
-
-🛍 Use sacolas reutilizáveis.
-
-</div>
-
-
-
-<div class="item">
-
-🚲 Prefira bicicleta.
-
-</div>
-
-
-
-<div class="item">
-
-🌱 Faça compostagem.
-
-</div>
-
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-
-<!-- ================= PERFIL ================= -->
-
-
-<section class="tela" id="perfil">
-
-
-
-<div class="topo">
-
-
-<button class="voltar" onclick="mostrar('home')">
-
-←
-
-</button>
-
-
-
-<h2>
-
-Meu Perfil
-
-</h2>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="perfil">
-
-
-<div class="avatar">
-
-👤
-
-</div>
-
-
-
-
-<h2 id="nomePerfil">
-
-Pedro Henrique
-
-</h2>
-
-
-
-
-<p>
-
-Membro EcoTech
-
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="eco-card">
-
-
-<h3>
-
-350 EcoPontos
-
-</h3>
-
-
-
-<span>
-
-Nível Verde
-
-</span>
-
-
-</div>
-
-
-
-
-
-
-<div class="lista">
-
-
-<div class="item">
-
-🌳 45 kg reciclados
-
-</div>
-
-
-
-<div class="item">
-
-🏆 15 descartes realizados
-
-</div>
-
-
-
-<div class="item">
-
-📖 8 guias consultados
-
-</div>
-
-
-
-<div class="item">
-
-⭐ Meta: 500 EcoPontos
-
-</div>
-
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-
-<!-- ================= MENU ================= -->
-
-
-<nav>
-
-
-
-<button onclick="mostrar('home')">
-
-<span>
-
-🏠
-
-</span>
-
-Home
-
-</button>
-
-
-
-
-
-<button onclick="mostrar('mapa')">
-
-<span>
-
-📍
-
-</span>
-
-Mapa
-
-</button>
-
-
-
-
-
-
-<button onclick="mostrar('guia')">
-
-<span>
-
-📖
-
-</span>
-
-Guia
-
-</button>
-
-
-
-
-
-
-<button onclick="mostrar('perfil')">
-
-<span>
-
-👤
-
-</span>
-
-Perfil
-
-</button>
-
-
-
-</nav>
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-<script src="script.js"></script>
-
-
+  <div class="celular">
+
+    <!-- HEADER GLOBAL -->
+    <header>
+      <div class="logo">🌱</div>
+      <div>
+        <h1>EcoTech</h1>
+        <p>Sustentabilidade na palma da sua mão</p>
+      </div>
+    </header>
+
+    <!-- ================= 1. TELA HOME ================= -->
+    <section class="tela ativa" id="home">
+      <div class="banner">
+        <div>
+          <span class="bemvindo">Bem-vindo!</span>
+          <h2 id="nomeUsuarioHome">Usuário</h2>
+          <p>Continue reciclando e ganhe EcoPontos!</p>
+        </div>
+        <div class="banner-icon">🌍</div>
+      </div>
+
+      <!-- Form Descarte -->
+      <div class="card-descarte">
+        <h3>♻️ Registrar Novo Descarte</h3>
+        <form id="formDescarte">
+          <div class="input-group">
+            <label for="tipoMaterial">Material</label>
+            <select id="tipoMaterial" required>
+              <option value="Papel">📄 Papel</option>
+              <option value="Plástico">MF Plástico</option>
+              <option value="Vidro">🍾 Vidro</option>
+              <option value="Metal">🥫 Metal</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="pesoMaterial">Peso (kg)</label>
+            <input type="number" id="pesoMaterial" min="0.1" step="0.1" placeholder="Ex: 1.5" required>
+          </div>
+
+          <button type="submit" class="btn-registrar">Registrar e Somar Pontos</button>
+        </form>
+      </div>
+
+      <h3 class="titulo">Acesso Rápido</h3>
+
+      <div class="grid">
+        <div class="card" data-ir="guia">
+          <div class="icone">📖</div>
+          <h4>Guia</h4>
+          <p>Aprenda a reciclar corretamente.</p>
+        </div>
+        <div class="card" data-ir="mapa">
+          <div class="icone">📍</div>
+          <h4>Mapa</h4>
+          <p>Encontre pontos de coleta.</p>
+        </div>
+        <div class="card" data-ir="dicas">
+          <div class="icone">💡</div>
+          <h4>Dicas</h4>
+          <p>Práticas sustentáveis.</p>
+        </div>
+        <div class="card" data-ir="perfil">
+          <div class="icone">🏆</div>
+          <h4>EcoPontos</h4>
+          <p>Veja sua pontuação.</p>
+        </div>
+      </div>
+
+      <div class="status-card" data-ir="sub-home">
+        <div>
+          <span>♻ Total reciclado (Clique p/ detalhes)</span>
+          <h3 id="statKgReciclados">0.0 kg</h3>
+        </div>
+        <div>🌱</div>
+      </div>
+
+      <div class="status-card" data-ir="sub-home">
+        <div>
+          <span>🏆 EcoPontos & Recompensas</span>
+          <h3 class="valEcoPontos">0 EcoPontos</h3>
+        </div>
+        <div>⭐</div>
+      </div>
+    </section>
+
+    <!-- ================= SUBPÁGINA HOME: RECOMPENSAS ================= -->
+    <section class="tela" id="sub-home">
+      <div class="topo">
+        <button type="button" class="voltar" data-ir="home">←</button>
+        <h2>Nível & Recompensas</h2>
+      </div>
+
+      <div class="eco-card">
+        <h3 class="valEcoPontos">0 EcoPontos</h3>
+        <span>Nível Atual: Mestre Reciclador</span>
+      </div>
+
+      <h3 class="titulo">Próximos Prêmios</h3>
+      <div class="lista">
+        <div class="item">
+          <div>
+            <h4>☕ Cupom Café Eco</h4>
+            <p>Resgate com 500 EcoPontos</p>
+          </div>
+          <button type="button" class="btn-msg" data-msg="Instruções enviadas por e-mail!">Resgatar</button>
+        </div>
+        <div class="item">
+          <div>
+            <h4>🛍️ Sacola Ecológica</h4>
+            <p>Resgate com 800 EcoPontos</p>
+          </div>
+          <button type="button" class="btn-msg" data-msg="EcoPontos insuficientes!">Resgatar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 2. TELA GUIA ================= -->
+    <section class="tela" id="guia">
+      <div class="topo">
+        <button type="button" class="voltar" data-ir="home">←</button>
+        <h2>Guia de Reciclagem</h2>
+      </div>
+
+      <div class="grid">
+        <div class="card btn-detalhe-guia" data-nome="Papel" data-icone="📄" data-desc="Remova fita adesiva e grampos das caixas de papelão. Papéis engordurados não podem ser reciclados.">
+          <div class="icone">📄</div>
+          <h4>Papel</h4>
+          <p>Jornais, revistas e caixas.</p>
+        </div>
+        <div class="card btn-detalhe-guia" data-nome="Plástico" data-icone="🧴" data-desc="Lave as embalagens plásticas para remover resíduos de alimentos antes de descartar.">
+          <div class="icone">🧴</div>
+          <h4>Plástico</h4>
+          <p>Garrafas e embalagens.</p>
+        </div>
+        <div class="card btn-detalhe-guia" data-nome="Vidro" data-icone="🍾" data-desc="Embale vidros quebrados em caixas ou jornal para não machucar os coletores.">
+          <div class="icone">🍾</div>
+          <h4>Vidro</h4>
+          <p>Garrafas e potes.</p>
+        </div>
+        <div class="card btn-detalhe-guia" data-nome="Metal" data-icone="🥫" data-desc="Amasse as latas de alumínio para economizar espaço na lixeira seletiva.">
+          <div class="icone">🥫</div>
+          <h4>Metal</h4>
+          <p>Latas e alumínio.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBPÁGINA GUIA -->
+    <section class="tela" id="sub-guia">
+      <div class="topo">
+        <button type="button" class="voltar" data-ir="guia">←</button>
+        <h2 id="subGuiaTitulo">Material</h2>
+      </div>
+
+      <div class="mapa">
+        <div class="mapa-icone" id="subGuiaIcone">📦</div>
+        <h3 id="subGuiaNome">Detalhes do Material</h3>
+      </div>
+
+      <div class="card-descarte">
+        <h3>Como preparar para reciclagem?</h3>
+        <p id="subGuiaDescricao" style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+          Instruções de descarte.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= 3. TELA MAPA ================= -->
+    <section class="tela" id="mapa">
+      <div class="topo">
+        <button type="button" class="voltar" data-ir="home">←</button>
+        <h2>Pontos de Coleta</h2>
+      </div>
+
+      <div class="mapa">
+        <div class="mapa-icone">🗺️</div>
+        <h3>Mapa Interativo</h3>
+        <p>Encontre pontos próximos.</p>
+      </div>
+
+      <div class="lista">
+        <div class="item">
+          <div>
+            <h4>♻ Cooperativa ReciclaJá</h4>
+            <p>Centro • 1,2 km</p>
+          </div>
+          <button type="button" class="btn-detalhe-mapa" data-nome="Cooperativa ReciclaJá" data-endereco="Centro • 1,2 km" data-horario="Segunda a Sexta: 08:00 - 18:00" data-info="Aceita Papel, Plástico e Metal.">Ver</button>
+        </div>
+        <div class="item">
+          <div>
+            <h4>🏫 Escola EcoTech</h4>
+            <p>Bairro Verde • 2,5 km</p>
+          </div>
+          <button type="button" class="btn-detalhe-mapa" data-nome="Escola EcoTech" data-endereco="Bairro Verde • 2,5 km" data-horario="Segunda a Sexta: 07:00 - 17:00" data-info="Ponto focado em Vidro e Eletrônicos.">Ver</button>
+        </div>
+        <div class="item">
+          <div>
+            <h4>🌳 Parque Ambiental</h4>
+            <p>Zona Norte • 3 km</p>
+          </div>
+          <button type="button" class="btn-detalhe-mapa" data-nome="Parque Ambiental" data-endereco="Zona Norte • 3 km" data-horario="Todos os dias: 06:00 - 20:00" data-info="Ecoponto para todos os tipos de materiais.">Ver</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBPÁGINA MAPA -->
+    <section class="tela" id="sub-mapa">
+      <div class="topo">
+        <button type="button" class="voltar" data-ir="mapa">←</button>
+        <h2>Detalhes do Ponto</h2>
+      </div>
+
+      <div class="card-descarte">
+        <h3 id="subMapaNome">Nome do Ponto</h3>
+        <p id="subMapaEndereco" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">Endereço</p>
+        <div class="badge-pontos" id="subMapaHorario" style="display: inline-block; margin-bottom: 12px;">Horários</div>
+        <p id="subMapaInfo" style="font-size: 0.85rem; color: var(--text-main); margin-top: 8px;">Informações do local.</p>
+      </div>
+
+      <button type="button" class="btn-registrar btn-msg" data-msg="Traçando rota no GPS...">Traçar Rota no GPS 📍</button>
+    </section>
+
+    <!-- ================= 4. TELA DICAS ================= -->
+    <section class="tela" id="dicas">
+      <div class="topo">
+        <button type="button" class="voltar" data-ir="home">←</button>
+        <h2>Dicas Sustentáveis</h2>
+      </div>
+
+      <div class="lista">
+        <div class="item">💧 Economize água fechando a torneira.</div>
+        <div class="item">🔌 Desligue aparelhos sem uso.</div>
+        <div class="item">🛍 Use sacolas reutilizáveis.</div>
+        <div class="item">🚲 Prefira bicicleta.</div>
+        <div class="item">🌱 Faça compostagem.</div>
+      </div>
+    </section>
+
+    <!-- ================= 5. TELA PERFIL ================= -->
+    <section class="tela" id="perfil">
+      <div class="topo">
+        <button type="button" class="voltar" data-ir="home">←</button>
+        <h2>Meu Perfil</h2>
+      </div>
+
+      <div class="perfil">
+        <div class="avatar">👤</div>
+        <h2 id="nomePerfil">Pedro Henrique</h2>
+        <p>Membro EcoTech</p>
+
+        <form id="formEditarPerfil" class="form-perfil">
+          <div class="input-group">
+            <label for="inputNomePerfil">Alterar nome</label>
+            <div class="input-com-botao">
+              <input type="text" id="inputNomePerfil" placeholder="Digite seu novo nome" required maxlength="30">
+              <button type="submit" class="btn-salvar-nome">Salvar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="eco-card">
+        <h3>350 EcoPontos</h3>
+        <span>Nível Verde</span>
+      </div>
+
+      <div class="lista" style="margin-bottom: 16px;">
+        <div class="item">🌳 45 kg reciclados</div>
+        <div class="item">🏆 15 descartes realizados</div>
+        <div class="item" data-ir="sub-perfil" style="cursor: pointer;">
+          <div>⚙️ Configurações da Conta</div>
+          <span style="color: var(--primary); font-weight: bold;">→</span>
+        </div>
+      </div>
+
+      <h3 class="titulo">Histórico de Descartes</h3>
+      <div id="historicoDescartes" class="lista">
+        <!-- Renderizado via JS -->
+      </div>
+    </section>
+
+    <!-- SUBPÁGINA PERFIL -->
+    <section class="tela" id="sub-perfil">
+      <div class="topo">
+        <button type="button" class="voltar" data-ir="perfil">←</button>
+        <h2>Configurações</h2>
+      </div>
+
+      <div class="lista">
+        <div class="item">
+          <div>
+            <h4>🔔 Notificações</h4>
+            <p>Lembrete semanal de coleta</p>
+          </div>
+          <button type="button" class="btn-msg" data-msg="Notificações ativadas!">Ativado</button>
+        </div>
+        <div class="item">
+          <div>
+            <h4>🗑 Resetar Dados</h4>
+            <p>Zerar EcoPontos e Histórico</p>
+          </div>
+          <button type="button" id="btnResetar" style="background: #ffebee; color: #c62828;">Resetar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU INFERIOR (NAVEGAÇÃO PRINCIPAL) -->
+    <nav>
+      <button type="button" data-ir="home"><span>🏠</span>Home</button>
+      <button type="button" data-ir="mapa"><span>📍</span>Mapa</button>
+      <button type="button" data-ir="guia"><span>📖</span>Guia</button>
+      <button type="button" data-ir="perfil"><span>👤</span>Perfil</button>
+    </nav>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
-
 </html>
