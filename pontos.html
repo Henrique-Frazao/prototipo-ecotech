@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTech - Pontos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { light: '#E8F5E9', DEFAULT: '#2E7D32', dark: '#1B5E20', accent: '#81C784' } }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-900 flex justify-center items-center min-h-screen font-sans">
+
+  <div class="app-frame w-full bg-slate-50 relative flex flex-col justify-between overflow-hidden md:rounded-[40px] md:border-[8px] my-0 md:my-4 shadow-2xl">
+    
+    <header class="bg-gradient-to-r from-brand-dark to-brand text-white p-4 pt-6 flex justify-between items-center shadow-md">
+      <div class="flex items-center space-x-2">
+        <div class="w-8 h-8 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-md">
+          <i class="fa-solid fa-leaf text-lg text-green-300"></i>
+        </div>
+        <span class="font-extrabold text-lg tracking-wide">EcoTech</span>
+      </div>
+      <span class="text-xs bg-brand-dark/50 px-2.5 py-1 rounded-full text-green-100 font-semibold border border-white/10">3º E</span>
+    </header>
+
+    <main class="flex-1 overflow-y-auto p-4 space-y-3 pb-20">
+      <h2 class="text-base font-bold text-slate-800">Pontos de Coleta</h2>
+      
+      <div class="relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-xs"></i>
+        <input type="text" id="inputBuscaPontos" placeholder="Buscar por bairro ou material..." class="w-full text-xs pl-10 pr-3 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-brand shadow-sm transition">
+      </div>
+
+      <div class="space-y-3 mt-3">
+        
+        <div class="card-ponto p-4 border border-slate-100 rounded-2xl bg-white shadow-sm hover-card">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-xs text-slate-800">Cooperativa ReciclaJá</h3>
+            <span class="text-[9px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">Aberto</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-1">Rua da Sustentabilidade, 123 - Centro</p>
+
+          <div class="flex space-x-1.5 text-[9px] font-semibold text-slate-600 my-3">
+            <span class="bg-slate-100 px-2 py-1 rounded-md">Plástico</span>
+            <span class="bg-slate-100 px-2 py-1 rounded-md">Papel</span>
+            <span class="bg-slate-100 px-2 py-1 rounded-md">Metal</span>
+          </div>
+
+          <button onclick="registrarDescarte('Cooperativa ReciclaJá')" class="w-full text-center bg-brand text-white text-xs py-2.5 rounded-xl font-bold shadow-md shadow-brand/10 hover:bg-brand-dark">
+            Registrar Descarte (+50 pts)
+          </button>
+        </div>
+
+        <div class="card-ponto p-4 border border-slate-100 rounded-2xl bg-white shadow-sm hover-card">
+          <div class="flex justify-between items-start">
+            <h3 class="font-bold text-xs text-slate-800">PEV - Escola Municipal EcoTech</h3>
+            <span class="text-[9px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full">Ponto Voluntário</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-1">Av. Educação Ambiental, 45</p>
+
+          <div class="flex space-x-1.5 text-[9px] font-semibold text-slate-600 my-3">
+            <span class="bg-slate-100 px-2 py-1 rounded-md">Vidro</span>
+            <span class="bg-slate-100 px-2 py-1 rounded-md">Eletrônicos</span>
+          </div>
+
+          <button onclick="registrarDescarte('PEV - Escola Municipal')" class="w-full text-center bg-brand text-white text-xs py-2.5 rounded-xl font-bold shadow-md shadow-brand/10 hover:bg-brand-dark">
+            Registrar Descarte (+50 pts)
+          </button>
+        </div>
+
+      </div>
+    </main>
+
+    <nav class="absolute bottom-0 left-0 right-0 glass-effect border-t border-slate-100 flex justify-around py-3 px-2 text-slate-400">
+      <a href="index.html" class="flex flex-col items-center space-y-1 hover:text-brand">
+        <i class="fa-solid fa-house text-base"></i>
+        <span class="text-[10px] font-medium">Início</span>
+      </a>
+      <a href="guia.html" class="flex flex-col items-center space-y-1 hover:text-brand">
+        <i class="fa-solid fa-book-open text-base"></i>
+        <span class="text-[10px] font-medium">Guia</span>
+      </a>
+      <a href="pontos.html" class="flex flex-col items-center space-y-1 text-brand">
+        <i class="fa-solid fa-map-location-dot text-base"></i>
+        <span class="text-[10px] font-bold">Pontos</span>
+      </a>
+      <a href="perfil.html" class="flex flex-col items-center space-y-1 hover:text-brand">
+        <i class="fa-solid fa-award text-base"></i>
+        <span class="text-[10px] font-medium">EcoPontos</span>
+      </a>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
